@@ -12,7 +12,6 @@
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_URL": "https://phpmailer-aiven-hx9z.vercel.app",
-        "APP_KEY": "@app_key",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -25,8 +24,6 @@
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
 
-        "DB_CONNECTION": "mysql",
-        "DB_URL": "@db_url",
-        "MYSQL_ATTR_SSL_CA": "@mysql_attr_ssl_ca"
+        "DB_CONNECTION": "mysql"
     }
 }
