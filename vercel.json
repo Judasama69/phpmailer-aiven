@@ -10,7 +10,7 @@
     }],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_URL": "https://phpmailer-aiven-hx9z.vercel.app",
         "APP_KEY": "base64:Lmk7CMkau3vMEHeEatU1HpISTfCfuWS5JT8ofvwrvpA=",
 
