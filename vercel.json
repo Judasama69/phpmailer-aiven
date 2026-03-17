@@ -12,7 +12,7 @@
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_URL": "https://phpmailer-aiven-hx9z.vercel.app",
-        "APP_KEY": "your-app-key-here",
+        "APP_KEY": "base64:Lmk7CMkau3vMEHeEatU1HpISTfCfuWS5JT8ofvwrvpA=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -30,7 +30,7 @@
         "DB_PORT": "25534",
         "DB_DATABASE": "defaultdb",
         "DB_USERNAME": "avnadmin",
-        "DB_PASSWORD": "AVNS_1O8pDnFMi0aRE8mPSNN",
+        "DB_PASSWORD": "",
         "MYSQL_ATTR_SSL_CA": "/var/task/ca.pem"
     }
 }
