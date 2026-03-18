@@ -22,7 +22,12 @@
                 <form action="{{ route('phpmailer.send') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label>Email</label>
+                        <label>Your Email</label>
+                        <input type="email" name="sender_email" class="form-control"
+                               value="{{ auth()->user()->email }}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Recipient Email</label>
                         <input type="email" name="email" class="form-control" required>
                     </div>
                     <div class="form-group">
