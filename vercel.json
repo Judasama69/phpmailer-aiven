@@ -10,8 +10,9 @@
     }],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
+        "APP_DEBUG": "false",
         "APP_URL": "https://phpmailer-aiven-hx9z.vercel.app",
+        "APP_KEY": "your-app-key",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -33,17 +34,16 @@
         "DB_PORT": "25534",
         "DB_DATABASE": "defaultdb",
         "DB_USERNAME": "avnadmin",
-        "DB_PASSWORD": "AVNS_1O8pDnFMi0aRE8mPSNN",
+        "DB_PASSWORD": "your-aiven-password",
+        "MYSQL_ATTR_SSL_CA": "/var/task/ca.pem",
 
         "MAIL_MAILER": "smtp",
         "MAIL_HOST": "smtp.gmail.com",
         "MAIL_PORT": "587",
-        "MAIL_USERNAME": "kenjiepen14@gmail.com",
-        "MAIL_PASSWORD": "wxgmtpwjofkpbygz",
+        "MAIL_USERNAME": "noreply.yoursalon@gmail.com",
+        "MAIL_PASSWORD": "your-app-password",
         "MAIL_ENCRYPTION": "tls",
-        "MAIL_FROM_ADDRESS": "kenjiepen14@gmail.com",
-        "MAIL_FROM_NAME": "Test Only",
-
-
+        "MAIL_FROM_ADDRESS": "noreply.yoursalon@gmail.com",
+        "MAIL_FROM_NAME": "Your Salon Name"
     }
 }
