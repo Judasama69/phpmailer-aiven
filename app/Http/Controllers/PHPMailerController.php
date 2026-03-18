@@ -11,7 +11,9 @@ class PHPMailerController extends Controller
     public function send(Request $request)
     {
         try {
-            Mail::to($request->email)->send(new SampleMail($request->message));
+            Mail::to($request->email)->send(
+                new SampleMail($request->message, auth()->user()->email)
+            );
 
             return back()->with('success', 'Message has been sent using Laravel Mail!');
         } catch (\Exception $e) {

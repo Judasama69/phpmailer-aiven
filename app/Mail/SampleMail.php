@@ -7,6 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Queue\SerializesModels;
 
 class SampleMail extends Mailable
@@ -14,13 +15,15 @@ class SampleMail extends Mailable
     use Queueable, SerializesModels;
 
     public $content;
+    public $senderEmail;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($content)
+    public function __construct($content, $senderEmail = null)
     {
         $this->content = $content;
+        $this->senderEmail = $senderEmail;
     }
 
     /**
@@ -30,6 +33,9 @@ class SampleMail extends Mailable
     {
         return new Envelope(
             subject: 'Sample Mail',
+            replyTo: $this->senderEmail ? [
+                new Address($this->senderEmail)
+            ] : []
         );
     }
 
@@ -45,8 +51,6 @@ class SampleMail extends Mailable
 
     /**
      * Get the attachments for the message.
-     *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
      */
     public function attachments(): array
     {
