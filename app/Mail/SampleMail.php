@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Queue\SerializesModels;
 
 class SampleMail extends Mailable
@@ -15,7 +16,7 @@ class SampleMail extends Mailable
     public $content;
     public $senderEmail;
 
-    public function __construct($content, $senderEmail)
+    public function __construct($content, $senderEmail = null)
     {
         $this->content = $content;
         $this->senderEmail = $senderEmail;
@@ -23,11 +24,15 @@ class SampleMail extends Mailable
 
     public function envelope(): Envelope
     {
+        $replyTo = [];
+
+        if (!empty($this->senderEmail)) {
+            $replyTo = [new Address($this->senderEmail)];
+        }
+
         return new Envelope(
-            replyTo: [
-                new \Illuminate\Mail\Mailables\Address($this->senderEmail)
-            ],
-            subject: 'Message from ' . $this->senderEmail
+            replyTo: $replyTo,
+            subject: 'Message from ' . ($this->senderEmail ?? 'Unknown')
         );
     }
 
@@ -43,4 +48,3 @@ class SampleMail extends Mailable
         return [];
     }
 }
-
