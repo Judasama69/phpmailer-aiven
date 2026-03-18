@@ -19,3 +19,14 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/dashboard/send', [PHPMailerController::class, 'send'])->name('phpmailer.send');
 });
+
+Route::get('/debug-mail', function () {
+    return [
+        'mailer' => config('mail.default'),
+        'host' => config('mail.mailers.smtp.host'),
+        'port' => config('mail.mailers.smtp.port'),
+        'username' => config('mail.mailers.smtp.username'),
+        'encryption' => config('mail.mailers.smtp.encryption'),
+        'from' => config('mail.from.address'),
+    ];
+});
