@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SampleMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\SampleMail;
 
 class PHPMailerController extends Controller
 {
@@ -12,7 +12,7 @@ class PHPMailerController extends Controller
     {
         try {
             Mail::to($request->email)->send(
-                new SampleMail($request->message, auth()->user()->email)
+                new SampleMail($request->message, $request->sender_email)
             );
 
             return back()->with('success', 'Message has been sent using Laravel Mail!');
