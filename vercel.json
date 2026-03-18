@@ -10,7 +10,7 @@
     }],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_URL": "https://phpmailer-aiven-hx9z.vercel.app",
         "APP_KEY": "your-app-key",
 
@@ -27,7 +27,6 @@
         "SESSION_LIFETIME": "120",
         "SESSION_ENCRYPT": "false",
         "SESSION_PATH": "/",
-        "SESSION_DOMAIN": "phpmailer-aiven-hx9z.vercel.app",
 
         "DB_CONNECTION": "mysql",
         "DB_HOST": "mysql-28f28f24-kenjiepen14-b72d.a.aivencloud.com",
