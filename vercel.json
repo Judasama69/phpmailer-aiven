@@ -12,7 +12,7 @@
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://phpmailer-aiven-hx9z.vercel.app",
-        "APP_KEY": "your-app-key",
+        "APP_KEY": "base64:apMDCTos9l6x1Ke5aDgVvIbjmMC1PfeCgl9OXlZElpU=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
