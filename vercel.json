@@ -10,7 +10,7 @@
     }],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_URL": "https://phpmailer-aiven-hx9z.vercel.app",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
@@ -24,6 +24,20 @@
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
 
-        "DB_CONNECTION": "mysql"
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "mysql-28f28f24-kenjiepen14-b72d.a.aivencloud.com",
+        "DB_PORT": "25534",
+        "DB_DATABASE": "defaultdb",
+        "DB_USERNAME": "avnadmin",
+        "DB_PASSWORD": "AVNS_1O8pDnFMi0aRE8mPSNN",
+
+        "MAIL_MAILER": "smtp",
+        "MAIL_HOST": "smtp.gmail.com",
+        "MAIL_PORT": "587",
+        "MAIL_USERNAME": "kenjiepen14@gmail.com",
+        "MAIL_PASSWORD": "wxgmtpwjofkpbygz",
+        "MAIL_ENCRYPTION": "tls",
+        "MAIL_FROM_ADDRESS": "kenjiepen14@gmail.com",
+        "MAIL_FROM_NAME": "Test Only"
     }
 }
